@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container border">
+      <h1 class="text-center text-danger">Array Game!!</h1>
+      <div class="row">
+        <div class="col-lg-4 col-sm-12">
+          <!-- About -->
+          <h4>About</h4>
+          <p>
+            "Array Game" is a game that tests your ability to guess various
+            statistics from an array of numbers. This game is designed to train
+            players in understanding basic statistical concepts such as total,
+            average, largest member, and smallest member in a set of numbers.
+          </p>
+
+          <!-- How To Play -->
+          <h4>How To Play?</h4>
+          <ol>
+            <li>
+              Click the "Generate Array" button to obtain 100 random numbers
+              from 1-50.
+            </li>
+            <li>
+              Start filling in your answers in the provided columns based on the
+              previously given numbers.
+            </li>
+            <li>
+              Click the "Check Answer" button to see if your answers are
+              correct.
+            </li>
+            <li>If you want to play again, click the "Play Again" button.</li>
+          </ol>
+
+          <!-- Objectives -->
+          <h4>Objectives</h4>
+          <p>
+            Game Objective: The objective of "Array Game" is to train players in
+            understanding basic statistics while maintaining accuracy in
+            guessing the statistical results from the given array of numbers.
+          </p>
+        </div>
+
+        <!-- Array Container -->
+        <div class="col-lg-4 col-sm-12 d-flex flex-column">
+          <div class="h4">Your Array :</div>
+          <div id="container-array"></div>
+          <button
+            id="generate-button"
+            class="btn btn-primary mt-3 w-50 mx-auto"
+          >
+            Generate Array
+          </button>
+          <button
+            id="play-again-button"
+            class="btn btn-primary mt-3 w-50 mx-auto"
+          >
+            Play Again
+          </button>
+        </div>
+        <!-- Form -->
+        <div class="col-lg-4 col-sm-12">
+          <div class="h4">Your Answers</div>
+          <div class="row">
+            <!-- Min -->
+            <div class="h6">Guess the minimum number</div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="mb-3">
+                <label for="minimum-odd-array" class="form-label"
+                  >Odd Array</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="minimum-odd-array"
+                />
+                <small id="minimum-odd-wrong"></small>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="mb-3">
+                <label for="minimum-even-array" class="form-label"
+                  >Even Array</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="minimum-even-array"
+                />
+                <small id="minimum-even-wrong"></small>
+              </div>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="minimum"
+                id="odd-array-minimum-bigger"
+                value="Odd Array Minimum Number is bigger"
+              />
+              <label class="form-check-label" for="odd-array-minimum-bigger">
+                Odd Array Minimum Number is bigger
+              </label>
+              <small id="radio-minimum-odd-wrong"></small>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="minimum"
+                id="even-array-minimum-bigger"
+                value="Even Array Minimum Number is bigger"
+              />
+              <label class="form-check-label" for="even-array-minimum-bigger">
+                Even Array Minimum Number is bigger
+              </label>
+              <small id="radio-minimum-even-wrong"></small>
+            </div>
+            <!-- Min -->
+
+            <!-- Max -->
+            <div class="h6 mt-3">Guess the maximum number</div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="mb-3">
+                <label for="maximum-odd-array" class="form-label"
+                  >Odd Array</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="maximum-odd-array"
+                />
+                <small id="maximum-odd-wrong"></small>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="mb-3">
+                <label for="maximum-even-array" class="form-label"
+                  >Even Array</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="maximum-even-array"
+                />
+                <small id="maximum-even-wrong"></small>
+              </div>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="maximum"
+                id="odd-array-maximum-bigger"
+                value="Odd Array Maximum Number is bigger"
+              />
+              <label class="form-check-label" for="odd-array-maximum-bigger">
+                Odd Array Maximum Number is bigger
+              </label>
+              <small id="radio-maximum-odd-wrong"></small>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="maximum"
+                id="even-array-maximum-bigger"
+                value="Even Array Maximum Number is bigger"
+              />
+              <label class="form-check-label" for="even-array-maximum-bigger">
+                Even Array Maximum Number is bigger
+              </label>
+              <small id="radio-maximum-even-wrong"></small>
+            </div>
+            <!-- Max -->
+
+            <!-- Total -->
+            <div class="h6 mt-3">Guess the sum of number</div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="mb-3">
+                <label for="sum-odd-array" class="form-label">Odd Array</label>
+                <input type="number" class="form-control" id="sum-odd-array" />
+                <small id="sum-odd-wrong"></small>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="mb-3">
+                <label for="sum-even-array" class="form-label"
+                  >Even Array</label
+                >
+                <input type="number" class="form-control" id="sum-even-array" />
+                <small id="sum-even-wrong"></small>
+              </div>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sum"
+                id="sum-array-same"
+                value="Odd and Even Array Sum is same"
+              />
+              <label class="form-check-label" for="sum-array-same">
+                Odd and Even Array Sum is same
+              </label>
+              <small id="radio-sum-same-wrong"></small>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="sum"
+                id="sum-array-different"
+                value="Odd and Even Array Sum is Different"
+              />
+              <label class="form-check-label" for="sum-array-different">
+                Odd and Even Array Sum is Different
+              </label>
+              <small id="radio-sum-different-wrong"></small>
+            </div>
+            <!-- Total -->
+
+            <!-- Average -->
+            <div class="h6 mt-3">Guess the average number</div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="mb-3">
+                <label for="average-odd-array" class="form-label"
+                  >Odd Array</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="average-odd-array"
+                />
+                <small id="average-odd-wrong"></small>
+              </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+              <div class="mb-3">
+                <label for="average-even-array" class="form-label"
+                  >Even Array</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="average-even-array"
+                />
+                <small id="average-even-wrong"></small>
+              </div>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="average"
+                id="odd-array-average-bigger"
+                value="Odd Array Average Number is bigger"
+              />
+              <label class="form-check-label" for="odd-array-average-bigger">
+                Odd Array Average Number is bigger
+              </label>
+              <small id="radio-average-odd-wrong"></small>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="average"
+                id="even-array-average-bigger"
+                value="Even Array Average Number is bigger"
+              />
+              <label class="form-check-label" for="even-array-average-bigger">
+                Even Array Average Number is bigger
+              </label>
+              <small id="radio-average-even-wrong"></small>
+            </div>
+            <!-- Average -->
+            <button
+              id="button-check-answer"
+              class="btn btn-primary w-50 mx-auto my-3"
+            >
+              Check Answer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

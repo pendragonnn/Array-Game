@@ -1,0 +1,34 @@
+:root {
+  --light-blue: #e4f1ff;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+#list-number {
+  display: none;
+}
+
+.box-array {
+  padding: 12px;
+  list-style: none;
+  background-color: var(--light-blue);
+  display: flex;
+}
+
+.array {
+  margin: 1px;
+  padding: 1px;
+  border: 1px solid black;
+  color: red;
+  background-color: white;
+}
+
+#play-again-button {
+  display: none;
+}
+small {
+  display: none;
+}
