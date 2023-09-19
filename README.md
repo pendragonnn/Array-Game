@@ -11,4 +11,4 @@
 - If you want to play again, click the "Play Again" button.
 
 # Access Link
-### https://pendragonnn.github.io/Array-Game/)https://pendragonnn.github.io/Array-Game/
+### https://pendragonnn.github.io/Array-Game/
