@@ -13,69 +13,82 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container border">
-      <h1 class="text-center text-danger">Array Game!!</h1>
+    <div class="header-box w-50 mx-auto p-1 rounded-3 my-3">
+      <h1 class="text-center header">🕹️ Array Game 🎯</h1>
+    </div>
+    <div class="container border mb-5 rounded-3 p-3">
       <div class="row">
         <div class="col-lg-4 col-sm-12">
           <!-- About -->
-          <h4>About</h4>
-          <p>
-            "Array Game" is a game that tests your ability to guess various
-            statistics from an array of numbers. This game is designed to train
-            players in understanding basic statistical concepts such as total,
-            average, largest member, and smallest member in a set of numbers.
-          </p>
+          <div class="box p-1 rounded-2 mb-3">
+            <h4 class="text-center fw-bold my-3">🧾 About 🧾</h4>
+            <p class="text-justify p-1">
+              "Array Game" is a game that tests your ability to guess various
+              statistics from an array of numbers. This game is designed to
+              train players in understanding basic statistical concepts such as
+              total, average, largest member, and smallest member in a set of
+              numbers.
+            </p>
+          </div>
 
           <!-- How To Play -->
-          <h4>How To Play?</h4>
-          <ol>
-            <li>
-              Click the "Generate Array" button to obtain 100 random numbers
-              from 1-50.
-            </li>
-            <li>
-              Start filling in your answers in the provided columns based on the
-              previously given numbers.
-            </li>
-            <li>
-              Click the "Check Answer" button to see if your answers are
-              correct.
-            </li>
-            <li>If you want to play again, click the "Play Again" button.</li>
-          </ol>
+          <div class="box p-1 rounded-2 mb-3">
+            <h4 class="text-center my-3 fw-bold">How To Play? 👀</h4>
+            <ol>
+              <li>
+                Click the "Generate Array" button to obtain 100 random numbers
+                from 1-50.
+              </li>
+              <li>
+                Start filling in your answers in the provided columns based on
+                the previously given numbers.
+              </li>
+              <li>
+                Click the "Check Answer" button to see if your answers are
+                correct.
+              </li>
+              <li>If you want to play again, click the "Play Again" button.</li>
+            </ol>
+          </div>
 
           <!-- Objectives -->
-          <h4>Objectives</h4>
-          <p>
-            Game Objective: The objective of "Array Game" is to train players in
-            understanding basic statistics while maintaining accuracy in
-            guessing the statistical results from the given array of numbers.
-          </p>
+          <div class="box p-1 rounded-2">
+            <h4 class="text-center my-3 fw-bold">Objectives 🧠</h4>
+            <p class="text-justify p-1">
+              Game Objective: The objective of "Array Game" is to train players
+              in understanding basic statistics while maintaining accuracy in
+              guessing the statistical results from the given array of numbers.
+            </p>
+          </div>
         </div>
 
         <!-- Array Container -->
-        <div class="col-lg-4 col-sm-12 d-flex flex-column">
-          <div class="h4">Your Array :</div>
+        <div class="col-lg-4 d-flex flex-column">
+          <h4
+            class="text-center my-sm-3 my-lg-0 header-array w-50 mx-auto p-1 rounded-3"
+          >
+            Your Array
+          </h4>
           <div id="container-array"></div>
           <button
             id="generate-button"
-            class="btn btn-primary mt-3 w-50 mx-auto"
+            class="btn btn-primary w-50 mx-auto my-2"
           >
             Generate Array
           </button>
           <button
             id="play-again-button"
-            class="btn btn-primary mt-3 w-50 mx-auto"
+            class="btn btn-primary w-50 mx-auto my-2"
           >
             Play Again
           </button>
         </div>
         <!-- Form -->
-        <div class="col-lg-4 col-sm-12">
-          <div class="h4">Your Answers</div>
+        <div class="col-lg-4 col-sm-12 form">
+          <div class="h4 fw-bold my-1">Your Answers</div>
           <div class="row">
             <!-- Min -->
-            <div class="h6">Guess the minimum number</div>
+            <div class="h6 fw-bold">Guess the minimum number</div>
             <div class="col-lg-6 col-sm-12">
               <div class="mb-3">
                 <label for="minimum-odd-array" class="form-label"
@@ -131,7 +144,7 @@
             <!-- Min -->
 
             <!-- Max -->
-            <div class="h6 mt-3">Guess the maximum number</div>
+            <div class="h6 mt-3 fw-bold">Guess the maximum number</div>
             <div class="col-lg-6 col-sm-12">
               <div class="mb-3">
                 <label for="maximum-odd-array" class="form-label"
@@ -187,7 +200,7 @@
             <!-- Max -->
 
             <!-- Total -->
-            <div class="h6 mt-3">Guess the sum of number</div>
+            <div class="h6 mt-3 fw-bold">Guess the sum of number</div>
             <div class="col-lg-6 col-sm-12">
               <div class="mb-3">
                 <label for="sum-odd-array" class="form-label">Odd Array</label>
@@ -233,7 +246,7 @@
             <!-- Total -->
 
             <!-- Average -->
-            <div class="h6 mt-3">Guess the average number</div>
+            <div class="h6 mt-3 fw-bold">Guess the average number</div>
             <div class="col-lg-6 col-sm-12">
               <div class="mb-3">
                 <label for="average-odd-array" class="form-label"

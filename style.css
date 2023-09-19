@@ -1,5 +1,8 @@
 :root {
-  --light-blue: #e4f1ff;
+  --light-green: #d0e7d2;
+  --pastel-green: #b0d9b1;
+  --medium-green: #79ac78;
+  --dark-green: #618264;
 }
 
 * {
@@ -7,23 +10,63 @@
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: var(--dark-green);
+}
+
+/* container styling */
+.container {
+  background-color: var(--light-green);
+}
+
+/* header styling */
+.header-box {
+  background-color: var(--medium-green);
+}
+
+.header {
+  color: var(--light-green);
+}
+
+/* about styling */
+.box {
+  background-color: var(--medium-green);
+  color: var(--light-green);
+}
+
+/* header array styling */
+.header-array {
+  background-color: var(--medium-green);
+  color: var(--light-green);
+}
+
 #list-number {
   display: none;
 }
 
 .box-array {
-  padding: 12px;
+  font-size: 14px;
+  padding: 8px;
   list-style: none;
-  background-color: var(--light-blue);
+  background-color: var(--medium-green);
   display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 10px 0px;
 }
 
 .array {
   margin: 1px;
   padding: 1px;
-  border: 1px solid black;
-  color: red;
-  background-color: white;
+  border-radius: 2px;
+  color: var(--light-green);
+  background-color: var(--dark-green);
+}
+
+.array:hover {
+  opacity: 0.7;
+  cursor: default;
 }
 
 #play-again-button {
@@ -31,4 +74,19 @@
 }
 small {
   display: none;
+}
+
+/* form styling */
+.form {
+  color: var(--medium-green);
+}
+
+/* button styling */
+.btn {
+  background-color: var(--dark-green);
+  border: none;
+}
+
+.btn:hover {
+  background-color: var(--dark-green);
 }
